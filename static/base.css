@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    margin: 1em 0 .5em;
+    line-height: 1.25
+}
+
+h1 {
+    font-size: 2em
+}
+
+h2 {
+    font-size: 1.5em
+}
+
+h3 {
+    font-size: 1.2em
+}
+
+ul, ol {
+    margin: 1em 0;
+    padding-left: 40px
+}
+
+p, figure {
+    margin: 1em 0
+}
+
+a img {
+    border: none
+}
+
+sup, sub {
+    line-height: 0
+}
+
+#cheques {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 25%;
+  }
+  
+  #cheques td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #cheques tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #cheques tr:hover {background-color: #ddd;}
+  
+  #cheques th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }

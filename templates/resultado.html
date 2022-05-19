@@ -1,0 +1,25 @@
+{% extends "base_template.html" %}
+{% block title %}Resultado{% endblock %}
+{% block content %}
+    <h2>Objetivo: {{cantidad}}€</h2>
+    <h2>Conseguido: {{peso}}€</h2>
+   
+        <table id="cheques">
+            <thead>
+              <tr>
+                <th>Cantidad</th>                
+                <th>Tipo de cheque</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              {% for elem in resultado %}
+                <tr>
+                  <td>{{ elem[0] }}</td>
+                  <td>{{ elem[1] }}€</td>                  
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base_template.html" %}
+
+{% block title %}Registro de usuarios{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        <label for="cantidad">Cantidad: </label>
+        <input type="number" id="cantidad" name="cantidad" /><br>
+        <label for="cheque1">Tipo cheque 1: </label>
+        <input type="number" id="cheque1" name="cheque1" value="8" /><br>
+
+        <label for="cheque1">Tipo cheque 2: </label>
+        <input type="number" id="cheque2" name="cheque2" value="3" /><br>
+        
+        <label for="cheque3">Tipo cheque 3: </label>
+        <input type="number" id="cheque3" name="cheque3" value="2" /><br>
+        
+        <input type="submit" id="send-signup" name="signup" value="Calcular" />
+    </form>
+{% endblock %}
