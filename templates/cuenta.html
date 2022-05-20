@@ -3,18 +3,99 @@
 {% block title %}Registro de usuarios{% endblock %}
 
 {% block content %}
-    <form action="" method="post">
-        <label for="cantidad">Cantidad: </label>
-        <input type="number" id="cantidad" name="cantidad" /><br>
-        <label for="cheque1">Tipo cheque 1: </label>
-        <input type="number" id="cheque1" name="cheque1" value="8" /><br>
 
-        <label for="cheque1">Tipo cheque 2: </label>
-        <input type="number" id="cheque2" name="cheque2" value="3" /><br>
-        
-        <label for="cheque3">Tipo cheque 3: </label>
-        <input type="number" id="cheque3" name="cheque3" value="2" /><br>
-        
-        <input type="submit" id="send-signup" name="signup" value="Calcular" />
-    </form>
+<div class="login-root">
+    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+      <div class="loginbackground box-background--white padding-top--64">
+        <div class="loginbackground-gridContainer">
+          <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+            <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <h1><a href="http://XXXX/" rel="dofollow">Cuenta Cheques</a></h1>
+        </div>
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15">Cantidad a pagar</span>
+
+
+
+              <form id="stripe-login" action="" method="post">
+                <div class="field padding-bottom--24">                
+                    <input type="number" id="cantidad" name="cantidad" value="40" /><br>
+                </div>
+                <span class="padding-bottom--15">Tipos de cheques disponibles</span>
+
+                <div class="field padding-bottom--24">
+
+                    <div class="grid--50-50">
+                        <label for="cheque1">Tipo cheque 1: </label>
+                        <input type="number" id="cheque1" name="cheque1" value="8" />
+                    </div>
+                        
+                    <div class="grid--50-50">
+                        <label for="cheque2">Tipo cheque 2: </label>
+                        <input type="number" id="cheque2" name="cheque2" value="3" />
+                    </div>
+                    <div class="grid--50-50">
+                        <label for="cheque3">Tipo cheque 3: </label>
+                        <input type="number" id="cheque3" name="cheque3" value="2" />
+                    </div>
+                </div>
+                <div class="field padding-bottom--24">
+                    <input type="submit" id="send-signup" name="signup" value="Calcular" />
+                </div>
+            </form>
+
+
+
+<!--
+              <form id="stripe-login">
+                <div class="field padding-bottom--24">
+                  <label for="email">Email</label>
+                  <input type="email" name="email">
+                </div>
+                <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="password">Password</label>
+                    <div class="reset-pass">
+                      <a href="#">Forgot your password?</a>
+                    </div>
+                  </div>
+                  <input type="password" name="password">
+                </div>
+                <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+                  <label for="checkbox">
+                    <input type="checkbox" name="checkbox"> Stay signed in for a week
+                  </label>
+                </div>
+                <div class="field padding-bottom--24">
+                  <input type="submit" name="submit" value="Continue">
+                </div>
+                <div class="field">
+                  <a class="ssolink" href="#">Use single sign-on (Google) instead</a>
+                </div>
+              </form>
+
+            -->
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  
+
 {% endblock %}

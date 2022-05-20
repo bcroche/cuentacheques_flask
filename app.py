@@ -11,15 +11,22 @@ def index():
     return show_calcula_form()
 
 
+def safeInt(cadena):
+    if cadena == "":
+        return 0
+    else:
+        return int(cadena)
+
 @app.route("/cuenta/", methods=["GET", "POST"])
 def show_calcula_form():
     if request.method == 'POST':
-        cantidad = int (request.form['cantidad'])
+        cantidad = int (safeInt(request.form['cantidad']))
 
+        
         lista = []
-        lista.append(request.form['cheque1'])
-        lista.append(request.form['cheque2'])
-        lista.append(request.form['cheque3'])
+        lista.append(safeInt(request.form['cheque1']))
+        lista.append(safeInt(request.form['cheque2']))
+        lista.append(safeInt(request.form['cheque3']))
         cheques = []
         for c in lista:
             num = int(c)

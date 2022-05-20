@@ -1,9 +1,34 @@
 {% extends "base_template.html" %}
 {% block title %}Resultado{% endblock %}
 {% block content %}
+
+<div class="login-root">
+  <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+    <div class="loginbackground box-background--white padding-top--64">
+      <div class="loginbackground-gridContainer">
+        <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+          <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+      <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+        <h1><a href="http://XXXX/" rel="dofollow">Cuenta Cheques</a></h1>
+      </div>
+      <div class="formbg-outer">
+        <div class="formbg">
+          <div class="formbg-inner padding-horizontal--48">
+            <span class="padding-bottom--15">Objetivo: {{cantidad}}€</span>
+            <span class="padding-bottom--15">Conseguido: {{peso}}€</span>
+
+
+            <!--
     <h2>Objetivo: {{cantidad}}€</h2>
     <h2>Conseguido: {{peso}}€</h2>
-   
+            -->
+
+        <div class="field padding-bottom--24">
         <table id="cheques">
             <thead>
               <tr>
@@ -21,6 +46,25 @@
               {% endfor %}
             </tbody>
           </table>
-          <a href="/">Volver</a>
-    
+        </div>
+          <div class="field padding-bottom--24">
+          <a class="button" href="/"><button class="boton-custom">Volver</button></a>
+        </div>
+        </div>
+      </div>
+      <!--
+      <div class="footer-link padding-top--24">
+        <span>Don't have an account? <a href="">Sign up</a></span>
+        <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+          <span><a href="#">© Stackfindover</a></span>
+          <span><a href="#">Contact</a></span>
+          <span><a href="#">Privacy & terms</a></span>
+        </div>
+      </div>
+    -->
+    </div>
+  </div>
+</div>
+</div>
+
 {% endblock %}
