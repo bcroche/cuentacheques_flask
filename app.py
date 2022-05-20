@@ -6,13 +6,13 @@ def hello_world():
     return 'Hello world!' """
 
 posts = []
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("index.html", num_posts=len(posts))
+    return show_calcula_form()
 
 
 @app.route("/cuenta/", methods=["GET", "POST"])
-def show_signup_form():
+def show_calcula_form():
     if request.method == 'POST':
         cantidad = int (request.form['cantidad'])
 
